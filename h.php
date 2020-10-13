@@ -1,4 +1,10 @@
-<?php include('backend/condb.php');?>
+<?php 
+  if(!isset($_SESSION)){
+    session_start();
+  }
+  include('backend/condb.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

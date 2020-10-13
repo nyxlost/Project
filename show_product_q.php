@@ -1,10 +1,14 @@
 <?php 
+$q = $_GET['q']; // ประกาศตัวแปรรับค่า q เข้ามา
 $query_product = "SELECT * FROM tbl_product as p
 INNER JOIN tbl_type as t
 ON p.type_id = t.type_id
+WHERE p.p_name LIKE '%$q%'
 ORDER BY p.p_id ASC";
 $result_pro =mysqli_query($con, $query_product) or die ("Error in query: $query_product " . mysqli_error());
 ?>
+
+
 <div class="row">
 <?php foreach ($result_pro as $row_pro ) { ?>
 

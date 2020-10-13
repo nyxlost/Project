@@ -12,6 +12,7 @@
 
     <div class="row">
       <div class="col-md-3">
+        สวัสดี คุณ <?php echo $user; ?>
         <?php include('menu_left.php');?>
       </div>
 

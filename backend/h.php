@@ -1,3 +1,14 @@
+<?php 
+  session_start(); 
+  include('condb.php');
+  $userid = $_SESSION['userid'];
+  $user = $_SESSION['user'];
+  $userlevel = $_SESSION['userlevel'];
+ 	if($userlevel!='a'){
+    Header("Location: logout.php");  
+  }  
+?>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>เว็บไซต์ขายของหลุดจำนำ</title>

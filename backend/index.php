@@ -9,6 +9,7 @@
   <p></p>
     <div class="row">
       <div class="col-md-3">
+      สวัสดี คุณ <?php echo $user; ?>
         <!-- Left side column. contains the logo and sidebar -->
         <?php include('menu_left.php');?>
         <!-- Content Wrapper. Contains page content -->

@@ -15,7 +15,7 @@
     <img class="card-img-top" src="backend/p_img/<?php echo $row_pro['p_img']?>" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title"><?php echo $row_pro['p_name']?></h5>
-      <p class="card-text">ประเภท : <?php echo $row_pro['type_name']?> </p>
+      <p class="card-text">ราคา : <?php echo $row_pro['p_price']?> บาท </p>
       <a href="product_detail.php?id=<?php echo $row_pro['p_id']?>" class="btn btn-primary">รายละเอียด</a>
     </div>
     </div>

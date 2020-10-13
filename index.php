@@ -13,10 +13,13 @@
         <div class="col-md-10"><?php
 
             $act = (isset($_GET['act']) ? $_GET['act'] : '');
+            $q = (isset($_GET['q']) ? $_GET['q'] : '');
             if($act == 'showbytype'){
-
                 include('show_product_type.php'); 
-            }else{
+            }elseif($q!=''){
+              include('show_product_q.php');
+            }
+              else{
                 include('show_product.php');
             }
             ?>

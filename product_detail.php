@@ -3,9 +3,10 @@ include('h.php');
 include('backend/condb.php');
 $p_id = $_GET["id"];
 ?>
+
 <!DOCTYPE html>
 <head>
-  <title>ระบบร้านค้าออนไลน์</title>
+  <title>ระบบจองสินค้าหลุดจำนำ</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
@@ -28,7 +29,7 @@ $p_id = $_GET["id"];
 <body>
   
   <div class="container">
-    <?php include('navbar.php'); ?>
+    <?php include('navbar3.php'); ?>
     <div class="row">
       <?php
       $sql = "SELECT * FROM tbl_product as p 
@@ -36,7 +37,6 @@ $p_id = $_GET["id"];
                AND p_id = $p_id ";
       $result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error());
       $row = mysqli_fetch_array($result);
-
       ?>
       <div class="col-md-10">
         <div class="container" style="margin-top: 50px">
@@ -55,17 +55,39 @@ $p_id = $_GET["id"];
                 ประเภท <?php echo $row["type_name"];?>
               </p>
               <?php echo $row["p_detail"];?>
-                 <p> 
+                 <p>
+                 <p>
+                ราคา <?php echo $row["p_price"];?> บาท
+              </p> 
             </div>
-            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5500ee80057fdb99"></script>
-          <div class="addthis_inline_share_toolbox_sf2w" style="margin-left: 400px"></div>
-                  </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <button class="btn-1">จองสินค้า</button>
+  
+  <div class="container">
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">จอง</button>
+  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">จองสินค้า</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>คุณต้องการจองสินค้าชิ้นนี้หรือไม่</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ไม่</button>
+        <button type="button" class="btn btn-primary">ใช่</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

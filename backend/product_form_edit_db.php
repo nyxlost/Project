@@ -14,6 +14,7 @@ include('condb.php');  //ไฟล์เชื่อมต่อกับ databa
 	$p_name = $_POST["p_name"];
 	$type_id = $_POST["type_id"];
 	$p_detail = $_POST["p_detail"];
+	$p_price = $_POST["p_price"];
 	$p_img = (isset($_POST['p_img']) ? $_POST['p_img'] : '');
 	$img2 = $_POST['img2'];
 	$upload=$_FILES['p_img']['name'];
@@ -42,6 +43,7 @@ include('condb.php');  //ไฟล์เชื่อมต่อกับ databa
 			p_name='$p_name',
 			type_id='$type_id', 
 			p_detail='$p_detail',
+			p_price ='$p_price',
 			p_img='$newname'
 			WHERE p_id='$p_id' ";
 

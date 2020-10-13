@@ -1,8 +1,8 @@
 <div class="pos-f-t">
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
-      <h4 class="text-white">Collapsed content</h4>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
+      <h4 class="text-white">เว็บไซต์จองสินค้าหลุดจำนำ</h4>
+      <span class="text-muted">สินค้าหลุดจำนำมากมาย รอให้คุณมาจองแล้ว !!!!!!</span>
     </div>
   </div>
   <nav class="navbar navbar-dark bg-dark">

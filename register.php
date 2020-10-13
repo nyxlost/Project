@@ -1,0 +1,71 @@
+<?php 
+
+    session_start();
+
+    require_once "backend/condb.php";
+
+    if (isset($_POST['submit'])) {
+
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $name = $_POST['name'];
+
+        $user_check = "SELECT * FROM user WHERE username = '$username' LIMIT 1";
+        $result = mysqli_query($con, $user_check);
+        $user = mysqli_fetch_assoc($result);
+
+        if ($user['username'] === $username) {
+            echo "<script>alert('Username already exists');</script>";
+        } else {
+            $passwordenc = md5($password);
+
+            $query = "INSERT INTO user (username, password, name, userlevel)
+                        VALUE ('$username', '$passwordenc', '$name', 'm')";
+            $result = mysqli_query($con, $query);
+
+            if ($result) {
+                $_SESSION['success'] = "Insert user successfully";
+                header("Location: form_login.php");
+            } else {
+                $_SESSION['error'] = "Something went wrong";
+                header("Location: form_login.php");
+            }
+        }
+
+    }
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register Page</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="Enter your username" required>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Enter your password" required>
+        <br>
+        <label for="name">name</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <br>
+        <input type="submit" name="submit" value="Submit">
+    
+    </form>
+
+    <a href="index.php">Go back to index</a>
+    
+</body>
+</html>

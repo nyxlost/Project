@@ -50,6 +50,13 @@ $result = mysqli_query($con, $query);
              </textarea>
           </div>
         </div>
+        <div class="form-group">
+          <div class="col-sm-12">
+            <p> ราคา </p>
+             <textarea  name="p_price" rows="5" cols="60"><?php echo $p_price; ?>
+             </textarea>
+          </div>
+        </div>
             <div class="form-group">
           <div class="col-sm-12">
             <p> ภาพสินค้า </p>
