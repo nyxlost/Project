@@ -4,7 +4,7 @@
 
   <div class="container">
     <?php include('navbar2.php');?>
-    <img src="#" class="img-fluid" alt="Responsive image">
+    <img src="img/pic-nav.jpg" class="img-fluid" alt="Responsive image">
     <?php include('navbar.php');?>
     <div class="row">
         <div class="col-md-2">

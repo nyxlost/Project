@@ -16,7 +16,7 @@
         <a class="nav-link" href="form_login.php">เข้าสู่ระบบ <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="logout.php" onclick="return confirm('คุณต้องการออกจากระบบหรือไม่ ?')">ออกจากระบบ</a>
+        <a class="nav-link" href="logout.php" onclick="return confirm('คุณต้องการออกจากระบบหรือไม่ ?')">ออกจากระบบ<span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" action="index.php" method="GET">
