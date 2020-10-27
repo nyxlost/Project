@@ -38,7 +38,7 @@ $result = mysqli_query($con, $query);
         <div class="form-group">
           <div class="col-sm-12">
             <p> ราคา </p>
-             <textarea  name="p_price" rows="5" cols="60"></textarea>
+             <textarea  name="p_price" rows="5" cols="30"></textarea>
           </div>
         </div>
         <div class="form-group">

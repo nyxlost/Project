@@ -12,6 +12,7 @@ $p_name = $_POST['p_name'];
 $type_id = $_POST['type_id'];
 $p_detail = $_POST['p_detail'];
 $p_img =(isset($_POST['p_img']) ? $_POST['p_img'] :'');
+
 //img
 	$upload=$_FILES['p_img'];
 	if($upload <> '') {
