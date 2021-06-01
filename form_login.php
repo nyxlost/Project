@@ -15,7 +15,7 @@
 <body>
 
     <div class="header">
-        <h2>Loginn</h2>
+        <h2>Login</h2>
     </div>
 
     <form action="login.php" method="post">
